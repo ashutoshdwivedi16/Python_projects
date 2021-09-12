@@ -43,7 +43,11 @@ pipeline {
 
       }
     }
-
+      stage('Initializiing ......') {
+            steps {
+              checkout scm
+            }
+          }
 
     stage('Install Python Dependencies') {
       steps {
