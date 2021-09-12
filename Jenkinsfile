@@ -6,7 +6,6 @@ pipeline {
     string(name: 'ApplicationScopeWithTests', defaultValue: '', description: 'Comma-separated list of LifeTime applications to deploy (including test applications)')
     string(name: 'TriggeredBy', defaultValue: 'N/A', description: 'Name of LifeTime user that triggered the pipeline remotely.')
   }
-  options { skipStagesAfterUnstable() }
   environment {
     // Artifacts Folder
     ArtifactsFolder = "Artifacts"
