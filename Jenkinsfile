@@ -7,8 +7,8 @@ pipeline {
       steps {
         echo "Create ${env.ArtifactsFolder} Folder"
         
-        if(fileExists('./ArtifactsFolder')){
-        sh "mkdir ArtifactsFolder"
+        if (!fileExists('./ArtifactsFolder')) {
+            sh 'mkdir ArtifactsFolder'
         }
         
         // Only the virtual environment needs to be installed at the system level
