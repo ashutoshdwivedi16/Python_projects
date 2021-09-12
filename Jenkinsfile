@@ -9,7 +9,6 @@ pipeline {
   }
   options { 
       //skipStagesAfterUnstable() 
-      ansiColor('xterm')
       skipDefaultCheckout()
 
       }
@@ -43,7 +42,7 @@ pipeline {
 
       }
     }
-      stage('Initializiing ......') {
+      stage('Checkout ......') {
             steps {
               checkout scm
             }
