@@ -6,7 +6,11 @@ pipeline {
     stage('Install Python Dependencies') {
       steps {
         echo "Create ${env.ArtifactsFolder} Folder"
+        
+        if(fileExists('./ArtifactsFolder')){
         sh "mkdir ArtifactsFolder"
+        }
+        
         // Only the virtual environment needs to be installed at the system level
         echo "Install Python Virtual environments"
         sh 'pip install -q -I virtualenv --user'
